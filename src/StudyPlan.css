@@ -1,0 +1,180 @@
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title,
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orangered;
+}
+
+.progress-summary {
+  text-align: right;
+}
+
+.progress-percent {
+  font-size: 1.5rem;
+  color: green;
+}
+
+.progress-label {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #4ade80, #3b82f6);
+  transition: width 0.3s ease-in-out;
+}
+
+.summary-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.summary-box {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+}
+
+.summary-box.blue {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.summary-box.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.summary-box.purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.week-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.week-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: #a1ee77;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.week-button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.week-progress {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.topics {
+  margin-top: 1rem;
+}
+
+.topic-group {
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+}
+
+.topic-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: orange;
+}
+
+.topic-item {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: #588fc7;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.topic-item:hover {
+  background: #46b19a;
+}
+
+.topic-item.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.checkbox {
+  font-size: 1rem;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.resources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.resource-heading {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #16a34a;
+}
+
+.resource-list {
+  padding-left: 1.5rem;
+  background-color: #99dff4;
+  border: 2px solid #3b82f6;
+  padding: 1rem;
+  margin: 5px;
+  border-radius: 25px;
+}

@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './StudyPlan.css';
 
+const LOCAL_STORAGE_KEY = 'Amazon-studyplan-completed';
+
 const StudyPlan = () => {
-  const [completedItems, setCompletedItems] = useState(new Set());
+  // const [completedItems, setCompletedItems] = useState(new Set());
+  const [completedItems, setCompletedItems] = useState(() => {
+    const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+    return saved ? new Set(JSON.parse(saved)) : new Set();
+  });
   const [activeWeek, setActiveWeek] = useState(1);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(Array.from(completedItems)));
+  }, [completedItems]);
 
   const toggleItem = (itemId: string) => {
     const newCompleted = new Set(completedItems);
